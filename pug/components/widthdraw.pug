@@ -1,0 +1,24 @@
+div.withdraw-container
+  div.withdraw-content
+    h2 retiro
+    div.withdraw-content__data
+      p nombre del propietario:
+        span.name-ower.name-count
+    div.withdraw-content__detail 
+      p saldo disponible:
+      p $
+        span.money-count 
+    div.withdraw-count 
+      div.withdraw-count__one
+        label(for="") cuenta: 123 4567890123
+        input.withdraw-count__one-input(type="checkbox" name="count")
+      div.withdraw-count__two
+        label(for="") cuenta: 987 6543210987
+        input.withdraw-count__two-input(type="checkbox" name="count")
+    div.withdraw__detail
+    div.withdraw-input-send
+      div 
+        label(for="input-withdraw") introduce el monto que deseas retirar:
+        input.input__withdraw(type="number" name="input-withdraw")
+      div.botton-send__withdraw 
+        p retirar

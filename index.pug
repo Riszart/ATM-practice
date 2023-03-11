@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+  include pug/components/head.pug
+  body
+    section.index
+      div.cart-all-conteiner
+        div.cart-name-bank 
+          p bank 
+        div.cart-chip
+        div.cart-number 
+          p 1234 5678 9123 4567
+        div.cart
+          div.cart-name
+            div.cart-name__date-end 
+              p 2026
+              p 10/27
+            div.cart-name__ower
+              p.name-letter -------
+          div.cart-logo
+            p visa
+      form(action="")  
+        label(for="name-ower-cart") ingrese nombre completo: 
+        input.name-ower-cart(type="text" name="name-ower" maxlength="20")
+        label(for="name-password-cart") ingrese su clave:
+        input.name-password-cart(type="password" name="pass-ower")
+      div.botton validar
+  script(src="/js/script.js") 

@@ -1,0 +1,24 @@
+div.deposit-container
+  div.deposit-content
+    h2 depositar
+    div.deposit-content__data
+      p nombre del propietario:
+        span.name-ower.name-count
+    div.deposit-content__detail 
+      p saldo disponible:
+      p $
+        span.money-count 
+    div.deposit-count 
+      div.deposit-count__one
+        label(for="") cuenta: 123 4567890123
+        input.deposit-count__one-input(type="checkbox" name="count")
+      div.deposit-count__two
+        label(for="") cuenta: 987 6543210987
+        input.deposit-count__two-input(type="checkbox" name="count")
+    div.deposit__detail
+    div.deposit-input-send
+      div 
+        label(for="input-deposit") introduce el monto a depositar:
+        input.input__deposit(type="number" name="input-deposit")
+      div.botton-send__deposit 
+        p depositar

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Genos:wght@100;200;300;400;500;600;700;800;900&family=Play:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <div class="welcome">
+    <div>
+      <p></p>
+    </div>
+  </div>
+  <div class="principal">
+    <header>
+      <div class="content-img-header">
+        <img src="/img/rd-gold.png" alt="">
+        <img src="/img/riszart-logo-white.webp" alt="">
+      </div>
+      <div class="content-tittle-header">
+        <p>por favor seleccione su transferencia</p>
+      </div>
+    </header>
+    <main>
+      <section class="main-left">
+        <ul>
+          <li class="recharge"><span>recarga</span></li>
+          <li class="pay"><span>pago</span></li>
+          <li class="transactions"><span>trassacciones</span></li>
+          <li class="other"><span>otros</span></li>
+        </ul>
+      </section>
+      <section class="main-center">
+        <img src="/img/logo.png" alt="">
+        <div class="main-center__down">
+          <p>contacta al banco</p>
+          <div class="main-center__down-call">
+            <div class="main-content-icons">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+              <img src="" alt="">
+              <p>visitanos en nuestras redessociales</p>
+            </div>
+            <p>(01) 123-4567</p>
+            <p>www.riszart.com</p>
+          </div>
+        </div>
+      </section>
+      <section class="main-right">
+        <ul>
+          <li class="widthdraw"><span>retiro</span></li>
+          <li class=""><span>consultas</span></li>
+          <li class="transfer"><span>transferencia</span></li>
+          <li class="deposit"><span>depositos</span></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <div class="recharge-container">
+    <div class="recharge-content">
+      <h2>recharge</h2>
+      <div class="recharge-content__data">
+        <p>nombre del propietario:</p><span class="name-ower"></span>
+      </div>
+      <div class="recharge-content__detail"> 
+        <p>monto</p>
+        <p class="total-amount">$</p>
+        <p>total</p>
+      </div>
+      <div class="recharge-input-send">
+        <input class="input__recharge" type="number">
+        <div class="botton-send__recharge bottom">send</div>
+      </div>
+    </div>
+  </div>
+  <div class="withdraw-container">
+    <div class="withdraw-content">
+      <h2>retiro</h2>
+      <div class="withdraw-content__data">
+        <p>nombre del propietario:</p><span class="name-ower">riszart</span>
+      </div>
+      <div class="withdraw-content__detail"> 
+        <p>saldo disponible:</p>
+        <p class="">$1000</p>
+      </div>
+      <div class="withdraw-input-send">
+        <label for="input-withdraw">introduce el monto que deseas retirar:</label>
+        <input class="input__withdraw" type="number" name="input-withdraw">
+      </div>
+      <div class="botton-send__withdraw bottom">retirar</div>
+    </div>
+  </div>
+  <div class="deposit-container"></div>
+  <div class="pay-container"></div>
+  <div class="transactions-container"></div>
+  <div class="transfer-container"></div>
+  <script src="/script.js"></script>
+</body>
+</html>

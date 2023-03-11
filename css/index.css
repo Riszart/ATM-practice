@@ -8,21 +8,7 @@
   margin: 0;
   color: rgb(186, 201, 218);
 }
-.bottom {
-  width: auto;
-  height: auto;
-  padding: 5px 15px;
-  border: solid 2px black;
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 5px;
-}
-.bottom:hover{
-  background-color: blue;
-  border: solid 2px white;
-  color: black;
-}
+
 input {
   background-color: transparent;
   border: solid 2px black;
@@ -281,7 +267,7 @@ ul > li > span{
   }
 }
 /*--------------------------*/
-.recharge {
+.recharge-container {
   display: none;
   height: 100vh;
   width: 100%;
@@ -352,22 +338,20 @@ ul > li > span{
   text-transform: uppercase;
 }
 /*--------------------------*/
-.withdraw {
+
+/*--------------------------*/
+.deposit-container {
   display: none;
 }
 /*--------------------------*/
-.deposit {
+.pay-container {
   display: none;
 }
 /*--------------------------*/
-.pay {
+.transactions-container {
   display: none;
 }
 /*--------------------------*/
-.transactions {
-  display: none;
-}
-/*--------------------------*/
-.transfer {
+.transfer-container {
   display: none;
 }

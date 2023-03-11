@@ -1,0 +1,26 @@
+div.transfer-container
+  div.transfer-content
+    h2 tranferencia interbancaria
+    div.transfer-content__data
+      p propietario de la cuenta de origen:
+        span.name-ower.name-count
+    div.transfer-content__detail 
+      p saldo disponible:
+      p $
+        span.money-count
+    div.transfer-count 
+      div.transfer-count__one
+        label(for="") cuenta: 123 4567890123
+        input.transfer-count__one-input(type="checkbox" name="count")
+      div.transfer-count__two
+        label(for="") cuenta: 987 6543210987
+        input.transfer-count__two-input(type="checkbox" name="count")
+    div.transfer__detail
+    div.transfer-input-send
+      div 
+        label(for="input-transfer-count") introduce CCI de la cuenta del destino:
+        input.input__transfer-count(type="number" name="input-transfer")
+        label(for="input-transfer") introduce el monto que deseas tranferir:
+        input.input__transfer(type="number" name="input-transfer")
+      div.botton-send__transfer 
+        p transferir
