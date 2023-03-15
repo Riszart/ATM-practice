@@ -52,6 +52,155 @@ $color-main: darkorange;
   background-size: cover;
 }
 
+
+@mixin fail-count{
+  width: 100%;
+  position: relative;
+  top: 200px;
+  p {
+    background-color: #000000b9;
+    padding: 15px;
+    text-align: center;
+    text-transform: capitalize;
+    @include center;
+    @include font-size(35px)
+  }  
+}
+@mixin class-container{
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@mixin class-content {
+  width: 1124px;
+  height: 768px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include back-img('/img/redes.jpg');
+  h2 {
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding: 5px 0;
+    color: $color-main;
+    font-weight: 900;
+    @include font-size(32px)
+  }
+}
+@mixin boton-send__class{
+  width: 200px;
+  height: 80px;
+  background-color: $color-main;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 35px;
+  cursor: pointer;
+  @include font-size(35px);
+  p {
+    color: black;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}
+@mixin style-counts{
+  display: flex;
+  justify-content: space-evenly;
+  &__one, &__two {
+    height: auto;
+    width: auto;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: $color-main;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  label {
+    text-transform: capitalize;
+    cursor: pointer;
+    @include font-size(24px)
+  }
+  input {
+    visibility: hidden;
+  }
+}
+@mixin class__detail{
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: solid 1px $color-main;
+  background-color: #0f0f0fb9;
+}
+@mixin class-content__data{
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+  p {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: $color-main;
+    text-transform: capitalize;
+  }
+  span {
+    margin-right: 25px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    @include font-size(32px);
+  }
+}
+@mixin class-content__detail{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  text-transform: capitalize;
+  p:nth-child(1) {
+    color: $color-main;
+    @include font-size(18px)
+  }
+  p:nth-child(2) {
+    margin-right: 25px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    color: white;
+    @include font-size(18px)
+  }
+}
+@mixin class-input-send{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 15px;
+  position: absolute;
+  bottom: 20px;
+  text-transform: capitalize;
+  div {
+    label {
+      margin-bottom: 10px;
+      display: block;
+      color: $color-main;
+      @include font-size(18px)
+    }
+    input {
+      width: 300px;
+      height: 40px;
+      color: $color-main;
+      background-color: black;
+      border: solid 1px $color-main;
+      @include font-size(18px);
+    }
+  }
+}
 * {
   user-select: none;
   padding: 0;

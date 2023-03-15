@@ -1,31 +1,31 @@
-.deposit-container {
+.withdraw-container {
   @include class-container;
-  .deposit-content {
+  .withdraw-content {
     h2{
-      width: 220px;
+      width: 145px;
     }
     @include class-content;
-    .deposit-content__data {
+    .withdraw-content__data {
       @include class-content__data;
     }
-    .deposit-content__detail {
+    .withdraw-content__detail {
       @include class-content__detail;
     }
-    .deposit-count  {
+    .withdraw-count  {
       @include style-counts;
     }
-    .deposit__detail{
+    .withdraw__detail{
       height: 450px;
       @include class__detail;
     }
-    .deposit-input-send {
+    .withdraw-input-send {
       @include class-input-send;
     }
-    .botton-send__deposit {
+    .botton-send__withdraw {
       @include boton-send__class;
     }
   }
 }
-.failure-container-deposit{
-  @include fail-count; 
+.failure-container{
+  @include fail-count;
 }

@@ -5,10 +5,17 @@ div.transactions-container
       p nombre del propietario:
         span.name-ower.name-count
     div.transactions-content__detail 
-      p saldo disponible:
+      p saldo disponible de la cuenta de origen:
       p $
         span.money-count 
-    div.widthdraw__detail
+    div.transactions-count 
+      div.transactions-count__one
+        label(for="") cuenta: 123 4567890123
+        input.transactions-count__one-input(type="checkbox" name="count")
+      div.transactions-count__two
+        label(for="") cuenta: 987 6543210987
+        input.transactions-count__two-input(type="checkbox" name="count")
+    div.transactions__detail
     div.transactions-input-send
       div 
         label(for="input-transactions") monto de la transacción:

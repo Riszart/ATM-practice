@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&amp;family=Genos:wght@100;200;300;400;500;600;700;800;900&amp;family=Play:wght@400;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/../css/principal.css">
+    <link rel="stylesheet" href="/css/principal.css">
   </head>
   <body>
     <div class="principal">
@@ -33,7 +33,7 @@
             <li class="other"><span>otros</span></li>
           </ul>
         </section>
-        <section class="main-center"><img src="img/logo.png" alt="">
+        <section class="main-center"><img src="/img/logo.png" alt="">
           <div class="main-center__down">
             <p>contacta al banco</p>
             <div class="main-center__down-call">
@@ -48,7 +48,7 @@
         <section class="main-right">
           <ul>
             <li class="widthdraw"><span>retiro</span></li>
-            <li><span>consultas</span></li>
+            <li class="question"><span>consultas</span></li>
             <li class="transfer"><span>transferencia</span></li>
             <li class="deposit"><span>depositos</span></li>
           </ul>
@@ -160,10 +160,20 @@
           <p>nombre del propietario:<span class="name-ower name-count"></span></p>
         </div>
         <div class="transactions-content__detail"> 
-          <p>saldo disponible:</p>
+          <p>saldo disponible de la cuenta de origen:</p>
           <p>$<span class="money-count"> </span></p>
         </div>
-        <div class="widthdraw__detail"></div>
+        <div class="transactions-count"> 
+          <div class="transactions-count__one">
+            <label for="">cuenta: 123 4567890123</label>
+            <input class="transactions-count__one-input" type="checkbox" name="count">
+          </div>
+          <div class="transactions-count__two">
+            <label for="">cuenta: 987 6543210987</label>
+            <input class="transactions-count__two-input" type="checkbox" name="count">
+          </div>
+        </div>
+        <div class="transactions__detail"></div>
         <div class="transactions-input-send">
           <div> 
             <label for="input-transactions">monto de la transacción:</label>

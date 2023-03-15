@@ -1,9 +1,10 @@
-document.querySelector('.recharge').addEventListener('click', ()=>changePage('rechange'))
-document.querySelector('.pay').addEventListener('click', ()=>changePage('pay'))
+//document.querySelector('.recharge').addEventListener('click', ()=>changePage('rechange'))
+//document.querySelector('.pay').addEventListener('click', ()=>changePage('pay'))
 document.querySelector('.transactions').addEventListener('click', ()=>changePage('transactions'))
-document.querySelector('.other').addEventListener('click', ()=>changePage('other'))
+//document.querySelector('.other').addEventListener('click', ()=>changePage('other'))
 
 document.querySelector('.widthdraw').addEventListener('click', ()=>changePage('withdraw'))
+//document.querySelector('.question').addEventListener('click', ()=>changePage('question'))
 document.querySelector('.transfer').addEventListener('click', ()=>changePage('transfer'))
 document.querySelector('.deposit').addEventListener('click', ()=>changePage('deposit'))
 
@@ -70,7 +71,11 @@ function operation(page){
           return
         }
       }else if(page === 'transactions' && money <= availableBalance){
+        let secondCount
+        if(countUser === 'count01')secondCount = 'count02'
+        else if(countUser === 'count02') secondCount = 'count01'
         result = availableBalance - money
+        localStorage.setItem(secondCount, money + Number(localStorage.getItem(secondCount)))
       }else{
         errorAction(page, countUser)
         return

@@ -288,6 +288,7 @@ header .content-img-header .container-name {
   margin-top: 45px;
   text-transform: uppercase;
   font-weight: 900;
+  text-align: center;
   font-size: 25px;
   font-size: 1.5625rem;
   line-height: 2.34375rem;
@@ -549,11 +550,13 @@ main .main-right ul li span {
   background-size: cover;
 }
 .withdraw-container .withdraw-content h2 {
-  width: 100px;
+  width: 145px;
+}
+.withdraw-container .withdraw-content h2 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 5px;
-  padding: 15px 15px;
+  padding: 5px 0;
   color: darkorange;
   font-weight: 900;
   font-size: 32px;
@@ -570,15 +573,24 @@ main .main-right ul li span {
           justify-content: space-between;
 }
 .withdraw-container .withdraw-content .withdraw-content__data p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: darkorange;
   text-transform: capitalize;
 }
 .withdraw-container .withdraw-content .withdraw-content__data span {
-  margin-left: 500px;
-  font-size: 26px;
+  margin-right: 25px;
   font-weight: 900;
   color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 .withdraw-container .withdraw-content .withdraw-content__detail {
   display: -webkit-box;
@@ -589,7 +601,6 @@ main .main-right ul li span {
           justify-content: space-between;
   margin-left: 25px;
   text-transform: capitalize;
-  margin-top: 15px;
 }
 .withdraw-container .withdraw-content .withdraw-content__detail p:nth-child(1) {
   color: darkorange;
@@ -610,63 +621,65 @@ main .main-right ul li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .withdraw-container .withdraw-content .withdraw-count__one, .withdraw-container .withdraw-content .withdraw-count__two {
   height: auto;
   width: auto;
+  margin-top: 10px;
   padding: 5px 15px;
   background-color: darkorange;
   border-radius: 5px;
   cursor: pointer;
 }
-.withdraw-container .withdraw-content .withdraw-count__one label, .withdraw-container .withdraw-content .withdraw-count__two label {
+.withdraw-container .withdraw-content .withdraw-count label {
   text-transform: capitalize;
   cursor: pointer;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
-.withdraw-container .withdraw-content .withdraw-count__one input, .withdraw-container .withdraw-content .withdraw-count__two input {
+.withdraw-container .withdraw-content .withdraw-count input {
   visibility: hidden;
 }
 .withdraw-container .withdraw-content .withdraw__detail {
-  background-color: rgba(15, 15, 15, 0.7254901961);
-  width: 80%;
-  height: 300px;
+  height: 450px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  border: solid 1px darkorange;
+  background-color: rgba(15, 15, 15, 0.7254901961);
 }
 .withdraw-container .withdraw-content .withdraw-input-send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  padding-left: 15px;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   text-transform: capitalize;
 }
 .withdraw-container .withdraw-content .withdraw-input-send div label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: block;
   color: darkorange;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 2.34375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 .withdraw-container .withdraw-content .withdraw-input-send div input {
-  width: 150px;
+  width: 300px;
   height: 40px;
-  margin-left: 150px;
   color: darkorange;
   background-color: black;
+  border: solid 1px darkorange;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
@@ -677,6 +690,7 @@ main .main-right ul li span {
   background-color: darkorange;
   text-align: center;
   border-radius: 5px;
+  margin-right: 35px;
   cursor: pointer;
   font-size: 35px;
   font-size: 2.1875rem;
@@ -734,11 +748,13 @@ main .main-right ul li span {
   background-size: cover;
 }
 .deposit-container .deposit-content h2 {
-  width: 100px;
+  width: 220px;
+}
+.deposit-container .deposit-content h2 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 5px;
-  padding: 15px 15px;
+  padding: 5px 0;
   color: darkorange;
   font-weight: 900;
   font-size: 32px;
@@ -755,15 +771,24 @@ main .main-right ul li span {
           justify-content: space-between;
 }
 .deposit-container .deposit-content .deposit-content__data p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: darkorange;
   text-transform: capitalize;
 }
 .deposit-container .deposit-content .deposit-content__data span {
-  margin-left: 500px;
-  font-size: 26px;
+  margin-right: 25px;
   font-weight: 900;
   color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 .deposit-container .deposit-content .deposit-content__detail {
   display: -webkit-box;
@@ -774,7 +799,6 @@ main .main-right ul li span {
           justify-content: space-between;
   margin-left: 25px;
   text-transform: capitalize;
-  margin-top: 15px;
 }
 .deposit-container .deposit-content .deposit-content__detail p:nth-child(1) {
   color: darkorange;
@@ -795,63 +819,65 @@ main .main-right ul li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .deposit-container .deposit-content .deposit-count__one, .deposit-container .deposit-content .deposit-count__two {
   height: auto;
   width: auto;
+  margin-top: 10px;
   padding: 5px 15px;
   background-color: darkorange;
   border-radius: 5px;
   cursor: pointer;
 }
-.deposit-container .deposit-content .deposit-count__one label, .deposit-container .deposit-content .deposit-count__two label {
+.deposit-container .deposit-content .deposit-count label {
   text-transform: capitalize;
   cursor: pointer;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
-.deposit-container .deposit-content .deposit-count__one input, .deposit-container .deposit-content .deposit-count__two input {
+.deposit-container .deposit-content .deposit-count input {
   visibility: hidden;
 }
 .deposit-container .deposit-content .deposit__detail {
-  background-color: rgba(15, 15, 15, 0.7254901961);
-  width: 80%;
-  height: 320px;
+  height: 450px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  border: solid 1px darkorange;
+  background-color: rgba(15, 15, 15, 0.7254901961);
 }
 .deposit-container .deposit-content .deposit-input-send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  padding-left: 15px;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   text-transform: capitalize;
 }
 .deposit-container .deposit-content .deposit-input-send div label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: block;
   color: darkorange;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 2.34375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 .deposit-container .deposit-content .deposit-input-send div input {
-  width: 150px;
+  width: 300px;
   height: 40px;
-  margin-left: 150px;
   color: darkorange;
   background-color: black;
+  border: solid 1px darkorange;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
@@ -862,6 +888,7 @@ main .main-right ul li span {
   background-color: darkorange;
   text-align: center;
   border-radius: 5px;
+  margin-right: 35px;
   cursor: pointer;
   font-size: 35px;
   font-size: 2.1875rem;
@@ -920,10 +947,12 @@ main .main-right ul li span {
 }
 .transfer-container .transfer-content h2 {
   width: 640px;
+}
+.transfer-container .transfer-content h2 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 5px;
-  padding: 15px 15px;
+  padding: 5px 0;
   color: darkorange;
   font-weight: 900;
   font-size: 32px;
@@ -940,15 +969,24 @@ main .main-right ul li span {
           justify-content: space-between;
 }
 .transfer-container .transfer-content .transfer-content__data p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: darkorange;
   text-transform: capitalize;
 }
 .transfer-container .transfer-content .transfer-content__data span {
-  margin-left: 500px;
-  font-size: 26px;
+  margin-right: 25px;
   font-weight: 900;
   color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 .transfer-container .transfer-content .transfer-content__detail {
   display: -webkit-box;
@@ -959,7 +997,6 @@ main .main-right ul li span {
           justify-content: space-between;
   margin-left: 25px;
   text-transform: capitalize;
-  margin-top: 15px;
 }
 .transfer-container .transfer-content .transfer-content__detail p:nth-child(1) {
   color: darkorange;
@@ -980,80 +1017,84 @@ main .main-right ul li span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .transfer-container .transfer-content .transfer-count__one, .transfer-container .transfer-content .transfer-count__two {
   height: auto;
   width: auto;
+  margin-top: 10px;
   padding: 5px 15px;
   background-color: darkorange;
   border-radius: 5px;
   cursor: pointer;
 }
-.transfer-container .transfer-content .transfer-count__one label, .transfer-container .transfer-content .transfer-count__two label {
+.transfer-container .transfer-content .transfer-count label {
   text-transform: capitalize;
   cursor: pointer;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
-.transfer-container .transfer-content .transfer-count__one input, .transfer-container .transfer-content .transfer-count__two input {
+.transfer-container .transfer-content .transfer-count input {
   visibility: hidden;
 }
 .transfer-container .transfer-content .transfer__detail {
-  background-color: rgba(15, 15, 15, 0.7254901961);
-  width: 80%;
-  height: 230px;
+  height: 380px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -65%);
-          transform: translate(-50%, -65%);
+  border: solid 1px darkorange;
+  background-color: rgba(15, 15, 15, 0.7254901961);
 }
 .transfer-container .transfer-content .transfer-input-send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  padding-left: 15px;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   text-transform: capitalize;
 }
 .transfer-container .transfer-content .transfer-input-send div label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: block;
   color: darkorange;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 2.34375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 .transfer-container .transfer-content .transfer-input-send div input {
   width: 300px;
   height: 40px;
-  margin-left: 150px;
   color: darkorange;
   background-color: black;
-  border: solid 1px #0defee;
+  border: solid 1px darkorange;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
 .transfer-container .transfer-content .botton-send__transfer {
-  width: 250px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 15px;
+  width: 200px;
   height: 80px;
   background-color: darkorange;
   text-align: center;
   border-radius: 5px;
+  margin-right: 35px;
   cursor: pointer;
   font-size: 35px;
   font-size: 2.1875rem;
   line-height: 3.28125rem;
+  width: 250px;
 }
 .transfer-container .transfer-content .botton-send__transfer p {
   color: black;
@@ -1107,11 +1148,13 @@ main .main-right ul li span {
   background-size: cover;
 }
 .transactions-container .transactions-content h2 {
-  width: 100px;
+  width: 315px;
+}
+.transactions-container .transactions-content h2 {
   margin: 0 auto;
   text-transform: uppercase;
   letter-spacing: 5px;
-  padding: 15px 15px;
+  padding: 5px 0;
   color: darkorange;
   font-weight: 900;
   font-size: 32px;
@@ -1128,15 +1171,24 @@ main .main-right ul li span {
           justify-content: space-between;
 }
 .transactions-container .transactions-content .transactions-content__data p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: darkorange;
   text-transform: capitalize;
 }
 .transactions-container .transactions-content .transactions-content__data span {
-  margin-left: 500px;
-  font-size: 26px;
+  margin-right: 25px;
   font-weight: 900;
   color: white;
   text-transform: uppercase;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 .transactions-container .transactions-content .transactions-content__detail {
   display: -webkit-box;
@@ -1147,7 +1199,6 @@ main .main-right ul li span {
           justify-content: space-between;
   margin-left: 25px;
   text-transform: capitalize;
-  margin-top: 15px;
 }
 .transactions-container .transactions-content .transactions-content__detail p:nth-child(1) {
   color: darkorange;
@@ -1164,42 +1215,69 @@ main .main-right ul li span {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
-.transactions-container .transactions-content .widthdraw__detail {
-  background-color: rgba(15, 15, 15, 0.7254901961);
-  width: 80%;
-  height: 400px;
+.transactions-container .transactions-content .transactions-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.transactions-container .transactions-content .transactions-count__one, .transactions-container .transactions-content .transactions-count__two {
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color: darkorange;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.transactions-container .transactions-content .transactions-count label {
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+}
+.transactions-container .transactions-content .transactions-count input {
+  visibility: hidden;
+}
+.transactions-container .transactions-content .transactions__detail {
+  height: 450px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 10px;
   border-radius: 10px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  border: solid 1px darkorange;
+  background-color: rgba(15, 15, 15, 0.7254901961);
 }
 .transactions-container .transactions-content .transactions-input-send {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
+  padding-left: 15px;
   position: absolute;
-  bottom: 50px;
+  bottom: 20px;
   text-transform: capitalize;
 }
 .transactions-container .transactions-content .transactions-input-send div label {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: block;
   color: darkorange;
-  font-size: 25px;
-  font-size: 1.5625rem;
-  line-height: 2.34375rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
 .transactions-container .transactions-content .transactions-input-send div input {
-  width: 150px;
+  width: 300px;
   height: 40px;
-  margin-left: 150px;
   color: darkorange;
   background-color: black;
+  border: solid 1px darkorange;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.6875rem;
@@ -1210,6 +1288,7 @@ main .main-right ul li span {
   background-color: darkorange;
   text-align: center;
   border-radius: 5px;
+  margin-right: 35px;
   cursor: pointer;
   font-size: 35px;
   font-size: 2.1875rem;

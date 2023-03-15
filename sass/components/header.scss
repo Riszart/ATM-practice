@@ -16,6 +16,7 @@ header {
       margin-top: 45px;
       text-transform: uppercase;
       font-weight: 900;
+      text-align: center;
       @include font-size(25px)
     }
     img:nth-child(3){

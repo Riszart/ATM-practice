@@ -1,123 +1,31 @@
 .transactions-container {
-  display: none;
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  @include class-container;
   .transactions-content {
-    width: 1124px;
-    height: 768px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include back-img('/img/redes.jpg');
-    h2 {
-      width: 100px;
-      margin: 0 auto;
-      text-transform: uppercase;
-      letter-spacing: 5px;
-      padding: 15px 15px;
-      color: $color-main;
-      font-weight: 900;
-      @include font-size(32px)
+    h2{
+      width: 315px;
     }
+    @include class-content;
     .transactions-content__data {
-      margin-left: 25px;
-      display: flex;
-      justify-content: space-between;
-      p {
-        color: $color-main;
-        text-transform: capitalize;
-      }
-      span {
-        margin-left: 500px;
-        font-size: 26px;
-        font-weight: 900;
-        color: white;
-        text-transform: uppercase;
-      }
+      @include class-content__data;
     }
     .transactions-content__detail {
-      display: flex;
-      justify-content: space-between;
-      margin-left: 25px;
-      text-transform: capitalize;
-      margin-top: 15px;
-      p:nth-child(1) {
-        color: $color-main;
-        @include font-size(18px)
-      }
-      p:nth-child(2) {
-        margin-right: 25px;
-        font-weight: 900;
-        letter-spacing: 5px;
-        color: white;
-        @include font-size(18px)
-      }
+      @include class-content__detail;
     }
-    .widthdraw__detail{
-      background-color: #0f0f0fb9;
-      width: 80%;
-      height: 400px;
-      border-radius: 10px;
-      @include center;
+    .transactions-count  {
+      @include style-counts;
+    }
+    .transactions__detail{
+      height: 450px;
+      @include class__detail;
     }
     .transactions-input-send {
-      display: flex;
-      justify-content: space-around;
-      width: 100%;
-      position: absolute;
-      bottom: 50px;
-      text-transform: capitalize;
-      div {
-        label {
-          margin-bottom: 15px;
-          display: block;
-          color: $color-main;
-          @include font-size(25px)
-        }
-        input {
-          width: 150px;
-          height: 40px;
-          margin-left: 150px;
-          color: $color-main;
-          background-color: black;
-          @include font-size(18px);
-        }
-      }
+      @include class-input-send;
     }
     .botton-send__transactions {
-      width: 200px;
-      height: 80px;
-      background-color: $color-main;
-      text-align: center;
-      border-radius: 5px;
-      cursor: pointer;
-      @include font-size(35px);
-      p {
-        color: black;
-        font-weight: 900;
-        text-transform: uppercase;
-        margin-top: 15px;
-      }
-      &:hover {
-        opacity: 0.5;
-      }
+      @include boton-send__class;
     }
   }
 }
 .failure-container{
-  width: 100%;
-  position: relative;
-  top: 200px;
-  p {
-    background-color: #000000b9;
-    padding: 15px;
-    text-align: center;
-    text-transform: capitalize;
-    @include center;
-    @include font-size(35px)
-  }  
+  @include fail-count;
 }
