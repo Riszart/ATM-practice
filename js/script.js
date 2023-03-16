@@ -1,28 +1,26 @@
-if(window.location.pathname === '/index.html'){
-  const inputName = document.querySelector('.name-ower-cart')
-  const inputPassword = document.querySelector('.name-password-cart')
+const inputName = document.querySelector('.name-ower-cart')
+const inputPassword = document.querySelector('.name-password-cart')
 
-  inputName.addEventListener('keypress', (event)=>{
-    if((inputName.value + event.key).length <= 20){
-      document.querySelector('.name-letter').innerText = inputName.value + event.key
-    }
-  })
+inputName.addEventListener('keypress', (event)=>{
+  if((inputName.value + event.key).length <= 20){
+    document.querySelector('.name-letter').innerText = inputName.value + event.key
+  }
+})
 
-  document.querySelector('.botton').addEventListener('click', ()=>{
-    if(inputPassword.value == 1234 && inputName.value.length >=5 ){
-      if(!localStorage["user"])create(inputName)
-      if(document.querySelector(".name-ower-cart").value === localStorage["user"]){
-        document.querySelector('.index').style.display = 'none'
-        inputName.value = ""
-        setTimeout(()=>{ window.open("/html/principal.html", "_self")}, 1000)
-      }
+document.querySelector('.botton').addEventListener('click', ()=>{
+  if(inputPassword.value == 1234 && inputName.value.length >=5 ){
+    if(!localStorage["user"])create(inputName)
+    if(document.querySelector(".name-ower-cart").value === localStorage["user"]){
+      document.querySelector('.index').style.display = 'none'
+      inputName.value = ""
+      setTimeout(()=>{ window.open("/html/principal.html", "_self")}, 1000)
     }
-    else {
-      inputPassword.style.border = 'solid 2px red'
-      inputName.style.border = 'solid 2px red'
-    }
-  })
-}
+  }
+  else {
+    inputPassword.style.border = 'solid 2px red'
+    inputName.style.border = 'solid 2px red'
+  }
+})
 
 function create(inputName){
   if(!localStorage["count01"]){
