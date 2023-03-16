@@ -21,8 +21,14 @@
     .transactions-input-send {
       @include class-input-send;
     }
+    .botton-content__transactions {
+      @include boton-content__class;
+    }
     .botton-send__transactions {
-      @include boton-send__class;
+      @include boton-style;
+    }
+    .botton-cancel__transactions {
+      @include boton-style;
     }
   }
 }

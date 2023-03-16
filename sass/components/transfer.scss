@@ -21,11 +21,16 @@
     .transfer-input-send {
       @include class-input-send;
     }
-    .botton-send__transfer {
+    .botton-content__transfer {
       align-self: flex-end;
       margin-bottom: 15px;
-      @include boton-send__class;
-      width: 250px;
+      @include boton-content__class;
+    }
+    .botton-send__transfer {
+      @include boton-style;
+    }
+    .botton-cancel__transfer {
+      @include boton-style;
     }
   }
 }

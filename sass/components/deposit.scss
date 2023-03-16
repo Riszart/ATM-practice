@@ -21,8 +21,14 @@
     .deposit-input-send {
       @include class-input-send;
     }
+    .botton-content__deposit {
+      @include boton-content__class;
+    }
     .botton-send__deposit {
-      @include boton-send__class;
+      @include boton-style;
+    }
+    .botton-cancel__deposit {
+      @include boton-style;
     }
   }
 }

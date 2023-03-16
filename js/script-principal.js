@@ -84,6 +84,10 @@ function operation(page){
       endAction(page, countUser)
     }
   })
+  document.querySelector(`.botton-cancel__${page}`).addEventListener('click', ()=>{
+    document.querySelector('.principal').style.display = "block"
+    document.querySelector(`.${page}-container`).style.display = "none"
+  })
 }
 function endAction(page, countUser){
   balance('.money-count', countUser)

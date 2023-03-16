@@ -544,7 +544,7 @@ main .main-right ul li span {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("/img/redes.jpg");
+  background-image: url("../img/redes.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -684,6 +684,13 @@ main .main-right ul li span {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
+.withdraw-container .withdraw-content .botton-content__withdraw {
+  border-radius: 5px;
+  margin-right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .withdraw-container .withdraw-content .botton-send__withdraw {
   width: 200px;
   height: 80px;
@@ -703,6 +710,27 @@ main .main-right ul li span {
   margin-top: 15px;
 }
 .withdraw-container .withdraw-content .botton-send__withdraw:hover {
+  opacity: 0.5;
+}
+.withdraw-container .withdraw-content .botton-cancel__withdraw {
+  width: 200px;
+  height: 80px;
+  background-color: darkorange;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 35px;
+  font-size: 2.1875rem;
+  line-height: 3.28125rem;
+}
+.withdraw-container .withdraw-content .botton-cancel__withdraw p {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.withdraw-container .withdraw-content .botton-cancel__withdraw:hover {
   opacity: 0.5;
 }
 
@@ -742,7 +770,7 @@ main .main-right ul li span {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("/img/redes.jpg");
+  background-image: url("../img/redes.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -882,6 +910,13 @@ main .main-right ul li span {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
+.deposit-container .deposit-content .botton-content__deposit {
+  border-radius: 5px;
+  margin-right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .deposit-container .deposit-content .botton-send__deposit {
   width: 200px;
   height: 80px;
@@ -901,6 +936,27 @@ main .main-right ul li span {
   margin-top: 15px;
 }
 .deposit-container .deposit-content .botton-send__deposit:hover {
+  opacity: 0.5;
+}
+.deposit-container .deposit-content .botton-cancel__deposit {
+  width: 200px;
+  height: 80px;
+  background-color: darkorange;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 35px;
+  font-size: 2.1875rem;
+  line-height: 3.28125rem;
+}
+.deposit-container .deposit-content .botton-cancel__deposit p {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.deposit-container .deposit-content .botton-cancel__deposit:hover {
   opacity: 0.5;
 }
 
@@ -940,7 +996,7 @@ main .main-right ul li span {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("/img/redes.jpg");
+  background-image: url("../img/redes.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1080,10 +1136,17 @@ main .main-right ul li span {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
-.transfer-container .transfer-content .botton-send__transfer {
+.transfer-container .transfer-content .botton-content__transfer {
   -ms-flex-item-align: end;
       align-self: flex-end;
   margin-bottom: 15px;
+  border-radius: 5px;
+  margin-right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.transfer-container .transfer-content .botton-send__transfer {
   width: 200px;
   height: 80px;
   background-color: darkorange;
@@ -1094,7 +1157,6 @@ main .main-right ul li span {
   font-size: 35px;
   font-size: 2.1875rem;
   line-height: 3.28125rem;
-  width: 250px;
 }
 .transfer-container .transfer-content .botton-send__transfer p {
   color: black;
@@ -1103,6 +1165,27 @@ main .main-right ul li span {
   margin-top: 15px;
 }
 .transfer-container .transfer-content .botton-send__transfer:hover {
+  opacity: 0.5;
+}
+.transfer-container .transfer-content .botton-cancel__transfer {
+  width: 200px;
+  height: 80px;
+  background-color: darkorange;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 35px;
+  font-size: 2.1875rem;
+  line-height: 3.28125rem;
+}
+.transfer-container .transfer-content .botton-cancel__transfer p {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.transfer-container .transfer-content .botton-cancel__transfer:hover {
   opacity: 0.5;
 }
 
@@ -1142,7 +1225,7 @@ main .main-right ul li span {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-image: url("/img/redes.jpg");
+  background-image: url("../img/redes.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1282,6 +1365,13 @@ main .main-right ul li span {
   font-size: 1.125rem;
   line-height: 1.6875rem;
 }
+.transactions-container .transactions-content .botton-content__transactions {
+  border-radius: 5px;
+  margin-right: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .transactions-container .transactions-content .botton-send__transactions {
   width: 200px;
   height: 80px;
@@ -1301,6 +1391,27 @@ main .main-right ul li span {
   margin-top: 15px;
 }
 .transactions-container .transactions-content .botton-send__transactions:hover {
+  opacity: 0.5;
+}
+.transactions-container .transactions-content .botton-cancel__transactions {
+  width: 200px;
+  height: 80px;
+  background-color: darkorange;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 35px;
+  cursor: pointer;
+  font-size: 35px;
+  font-size: 2.1875rem;
+  line-height: 3.28125rem;
+}
+.transactions-container .transactions-content .botton-cancel__transactions p {
+  color: black;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+.transactions-container .transactions-content .botton-cancel__transactions:hover {
   opacity: 0.5;
 }
 
