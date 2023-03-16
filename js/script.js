@@ -13,7 +13,7 @@ document.querySelector('.botton').addEventListener('click', ()=>{
     if(document.querySelector(".name-ower-cart").value === localStorage["user"]){
       document.querySelector('.index').style.display = 'none'
       inputName.value = ""
-      setTimeout(()=>{ window.open("/html/principal.html", "_self")}, 1000)
+      setTimeout(()=>{ window.open(`${window.location.pathname}html/principal.html`, "_self")}, 1000)
     }
   }
   else {
