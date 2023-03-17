@@ -11,9 +11,12 @@ document.querySelector('.botton').addEventListener('click', ()=>{
   if(inputPassword.value == 1234 && inputName.value.length >=5 ){
     if(!localStorage["user"])create(inputName)
     if(document.querySelector(".name-ower-cart").value === localStorage["user"]){
-      document.querySelector('.index').style.display = 'none'
       inputName.value = ""
-      setTimeout(()=>{ window.open(`${window.location.pathname}html/principal.html`, "_self")}, 1000)
+      if(window.location.pathname == '/index.html'){
+        setTimeout(()=>{window.open(`/html/principal.html`, "_self")}, 1000)
+      }else {
+        setTimeout(()=>{window.open(`${window.location.pathname}/html/principal.html`, "_self")}, 1000)
+      } 
     }
   }
   else {

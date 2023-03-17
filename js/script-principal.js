@@ -1,10 +1,10 @@
-//document.querySelector('.recharge').addEventListener('click', ()=>changePage('rechange'))
-//document.querySelector('.pay').addEventListener('click', ()=>changePage('pay'))
+document.querySelector('.recharge').addEventListener('click', ()=>changePage('rechange'))
+document.querySelector('.pay').addEventListener('click', ()=>changePage('pay'))
 document.querySelector('.transactions').addEventListener('click', ()=>changePage('transactions'))
-//document.querySelector('.other').addEventListener('click', ()=>changePage('other'))
+document.querySelector('.other').addEventListener('click', ()=>changePage('other'))
 
 document.querySelector('.widthdraw').addEventListener('click', ()=>changePage('withdraw'))
-//document.querySelector('.question').addEventListener('click', ()=>changePage('question'))
+document.querySelector('.question').addEventListener('click', ()=>changePage('question'))
 document.querySelector('.transfer').addEventListener('click', ()=>changePage('transfer'))
 document.querySelector('.deposit').addEventListener('click', ()=>changePage('deposit'))
 
@@ -40,13 +40,19 @@ function balance(classcount, selectCount){
 balance('.name-count', "user")
 
 function changePage(page){
+  if(page == 'rechange' || page == 'pay'|| page == 'other' || page == 'question'){
+    document.querySelector('.name-page-undefined').innerText = page
+    let error = document.querySelector('.undefined-content')
+    error.style.display  = "block"
+    setTimeout(()=>error.style.display = "none", 2000)
+    return
+  }
   document.querySelector('.principal').style.display = "none"
   document.querySelector(`.${page}-container`).style.display = "block"
   operation(page)
 }
 
 function operation(page){
-  console.log(page)
   document.querySelector(`.${page}-count__one`,'count01').addEventListener('click', ()=>countUser = ckecked('count01', page))
   document.querySelector(`.${page}-count__two`,'count01').addEventListener('click', ()=>countUser = ckecked('count02', page))
   let countUser
@@ -56,12 +62,13 @@ function operation(page){
   document.querySelector(`.botton-send__${page}`).addEventListener('click', ()=>{
     if(countUser != undefined){
       money = Number(document.querySelector(`.input__${page}`).value)
+      console.log(money)
       availableBalance = Number(localStorage.getItem(countUser))
-      if(page === 'deposit' && money < 10000){
+      if(page === 'deposit' && money <= 10000 && money >= 10){
         result = availableBalance + money
-      }else if(page === 'withdraw' && money <= availableBalance){
+      }else if(page === 'withdraw' && money <= 10000 && money >= 100){
         result = availableBalance - money
-      }else if(page === 'transfer' && money < availableBalance && money < 100000){
+      }else if(page === 'transfer' && money <= availableBalance && money <= 100000 && money >= 10){
         const countTranferOther = document.querySelector('.input__transfer-count')
         if(countTranferOther.value.length == 8){
           countTranferOther.style.border = "solid 1px #0defee"
@@ -76,17 +83,18 @@ function operation(page){
         else if(countUser === 'count02') secondCount = 'count01'
         result = availableBalance - money
         localStorage.setItem(secondCount, money + Number(localStorage.getItem(secondCount)))
-      }else{
-        errorAction(page, countUser)
+      }else {
+        errorAction(page)
         return
       }
       localStorage.setItem(countUser, result)
       endAction(page, countUser)
+    }else {
+      showMessaje(page, "seleccione un cuenta para realizar la operacion")
     }
   })
   document.querySelector(`.botton-cancel__${page}`).addEventListener('click', ()=>{
-    document.querySelector('.principal').style.display = "block"
-    document.querySelector(`.${page}-container`).style.display = "none"
+    window.location.reload()
   })
 }
 function endAction(page, countUser){
@@ -97,20 +105,27 @@ function endAction(page, countUser){
   }
 }
 function errorAction(page){
-  let msm
+  let messaje
   if(page === 'deposit'){
-    msm = `el cajero no acepta depositos mayores a 10,000`
+    messaje = `deposito mayor a 10,00.00 en ajente`
   }else if(page === 'withdraw'){
-    msm = `monto insuficiente para retirar en su cuenta`
+    messaje = `retiro aceptado mayor a 10.00 y menor de 10,00.00`
   }else if(page === 'transfer'){
-    msm = `no tiene la cantidad disponible`
+    messaje = `monto mayor a 100 y menor 100,000.00`
   }else if(page === 'transactions'){
-    msm = `no tiene el monto disponible`
+    messaje = `no tiene el monto disponible`
   }
-  document.querySelector(`.${page}-content`).innerHTML += `<div class="failure-container"><p>${msm}</p></div>`
-  setTimeout(()=>window.location.reload(), 1000)
+  showMessaje(page, messaje)
 }
-
-
-
-
+function showMessaje(page, messaje){
+  const pageShow = document.querySelector(`.${page}-content`)
+  const div = document.createElement('div')
+  div.classList.add('failure-container')
+  const p = document.createElement('p')
+  p.innerText += messaje
+  div.appendChild(p)
+  pageShow.appendChild(div)
+  setTimeout(()=>{
+    document.querySelector('.failure-container').remove()
+  }, 2000)
+}

@@ -55,13 +55,17 @@ $color-main: darkorange;
 
 @mixin fail-count{
   width: 100%;
-  position: relative;
-  top: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.247);
   p {
-    background-color: #000000b9;
+    display: block;
+    width: 100%;
     padding: 15px;
     text-align: center;
     text-transform: capitalize;
+    background-color: #b80e0eb7;
     @include center;
     @include font-size(35px)
   }  

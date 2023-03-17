@@ -736,14 +736,18 @@ main .main-right ul li span {
 
 .failure-container {
   width: 100%;
-  position: relative;
-  top: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.247);
 }
 .failure-container p {
-  background-color: rgba(0, 0, 0, 0.7254901961);
+  display: block;
+  width: 100%;
   padding: 15px;
   text-align: center;
   text-transform: capitalize;
+  background-color: rgba(184, 14, 14, 0.7176470588);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -962,14 +966,18 @@ main .main-right ul li span {
 
 .failure-container-deposit {
   width: 100%;
-  position: relative;
-  top: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.247);
 }
 .failure-container-deposit p {
-  background-color: rgba(0, 0, 0, 0.7254901961);
+  display: block;
+  width: 100%;
   padding: 15px;
   text-align: center;
   text-transform: capitalize;
+  background-color: rgba(184, 14, 14, 0.7176470588);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1191,14 +1199,18 @@ main .main-right ul li span {
 
 .failure-container {
   width: 100%;
-  position: relative;
-  top: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.247);
 }
 .failure-container p {
-  background-color: rgba(0, 0, 0, 0.7254901961);
+  display: block;
+  width: 100%;
   padding: 15px;
   text-align: center;
   text-transform: capitalize;
+  background-color: rgba(184, 14, 14, 0.7176470588);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1417,14 +1429,18 @@ main .main-right ul li span {
 
 .failure-container {
   width: 100%;
-  position: relative;
-  top: 200px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.247);
 }
 .failure-container p {
-  background-color: rgba(0, 0, 0, 0.7254901961);
+  display: block;
+  width: 100%;
   padding: 15px;
   text-align: center;
   text-transform: capitalize;
+  background-color: rgba(184, 14, 14, 0.7176470588);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1433,4 +1449,32 @@ main .main-right ul li span {
   font-size: 35px;
   font-size: 2.1875rem;
   line-height: 3.28125rem;
+}
+
+.undefined-content {
+  height: 100%;
+  width: 100%;
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.466);
+}
+
+.undefined-msm {
+  position: absolute;
+  background-color: rgba(184, 14, 14, 0.7176470588);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.undefined-msm p, .undefined-msm span {
+  display: inline-block;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 900;
+  color: darkorange;
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 4.5rem;
 }
