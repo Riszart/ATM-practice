@@ -122,9 +122,14 @@ $color-main: darkorange;
   width: 85%;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: solid 1px $color-main;
   background-color: #0f0f0fb9;
+  p {
+    color: rgb(58, 218, 58);
+    margin-left: 86px;
+  }
 }
 @mixin class-content__data{
   margin-left: 25px;

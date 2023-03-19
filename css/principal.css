@@ -649,9 +649,14 @@ main .main-right ul li span {
   width: 85%;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: solid 1px darkorange;
   background-color: rgba(15, 15, 15, 0.7254901961);
+}
+.withdraw-container .withdraw-content .withdraw__detail p {
+  color: rgb(58, 218, 58);
+  margin-left: 86px;
 }
 .withdraw-container .withdraw-content .withdraw-input-send {
   display: -webkit-box;
@@ -879,9 +884,14 @@ main .main-right ul li span {
   width: 85%;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: solid 1px darkorange;
   background-color: rgba(15, 15, 15, 0.7254901961);
+}
+.deposit-container .deposit-content .deposit__detail p {
+  color: rgb(58, 218, 58);
+  margin-left: 86px;
 }
 .deposit-container .deposit-content .deposit-input-send {
   display: -webkit-box;
@@ -1109,9 +1119,14 @@ main .main-right ul li span {
   width: 85%;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: solid 1px darkorange;
   background-color: rgba(15, 15, 15, 0.7254901961);
+}
+.transfer-container .transfer-content .transfer__detail p {
+  color: rgb(58, 218, 58);
+  margin-left: 86px;
 }
 .transfer-container .transfer-content .transfer-input-send {
   display: -webkit-box;
@@ -1342,9 +1357,14 @@ main .main-right ul li span {
   width: 85%;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 5px;
   border-radius: 10px;
   border: solid 1px darkorange;
   background-color: rgba(15, 15, 15, 0.7254901961);
+}
+.transactions-container .transactions-content .transactions__detail p {
+  color: rgb(58, 218, 58);
+  margin-left: 86px;
 }
 .transactions-container .transactions-content .transactions-input-send {
   display: -webkit-box;
