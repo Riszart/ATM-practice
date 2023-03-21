@@ -11,24 +11,27 @@ document.querySelector('.deposit').addEventListener('click', ()=>changePage('dep
 let arrayCount
 function ckecked(side, page){
   const count01 = document.querySelector(`.${page}-count__one-input`)
-  const count02 = document.querySelector(`.${page}-count__two-input`)
   const count01Container = document.querySelector(`.${page}-count__one`)
-  const count02Container = document.querySelector(`.${page}-count__two`)
-
+  let count02
+  let count02Container
+  if(arrayCount.count02){
+    count02 = document.querySelector(`.${page}-count__two-input`)
+    count02Container = document.querySelector(`.${page}-count__two`)
+  }
     if(side === 'count01'){
       count01.checked = true
-      count02.checked = false
+      if(arrayCount.count02)count02.checked = false
       count01Container.style.backgroundColor = '#316966'
-      count02Container.style.backgroundColor = '#ff8c00'
+      if(arrayCount.count02)count02Container.style.backgroundColor = '#ff8c00'
       side = arrayCount.count01
       balance('.money-count', side.countBalance)
     }else if(side === 'count02'){
-      count01.checked = false
-      count02.checked = true
-      count02Container.style.backgroundColor = '#316966'
-      count01Container.style.backgroundColor = '#ff8c00'
-      side = arrayCount.count02
-      balance('.money-count', side.countBalance)
+        count01.checked = false
+        count02.checked = true
+        count02Container.style.backgroundColor = '#316966'
+        count01Container.style.backgroundColor = '#ff8c00'
+        side = arrayCount.count02
+        balance('.money-count', side.countBalance)
     }
   return side
 }
@@ -48,8 +51,11 @@ for(let i = 0; i < localStorage.length; i++){
 balance('.name-count', arrayCount.countUser)
 
 function changePage(page){
-  const numbercount01Container = document.querySelector(`.${page}-number-count__one`).innerText = arrayCount.count01.countBank
-  const numbercount02Container = document.querySelector(`.${page}-number-count__two`).innerText = arrayCount.count02.countBank
+  document.querySelector(`.${page}-number-count__one`).innerText = arrayCount.count01.countBank
+  if(arrayCount.count02){
+    document.querySelector(`.${page}-number-count__two`).innerText = arrayCount.count02.countBank
+  }
+
   if(page == 'rechange' || page == 'pay'|| page == 'other' || page == 'question'){
     document.querySelector('.name-page-undefined').innerText = page
     let error = document.querySelector('.undefined-content')
@@ -64,7 +70,7 @@ function changePage(page){
 
 function operation(page){
   document.querySelector(`.${page}-count__one`,'count01').addEventListener('click', ()=>countCheck = ckecked('count01', page))
-  document.querySelector(`.${page}-count__two`,'count01').addEventListener('click', ()=>countCheck = ckecked('count02', page))
+  if(arrayCount.count02)document.querySelector(`.${page}-count__two`,'count02').addEventListener('click', ()=>countCheck = ckecked('count02', page))
   let countCheck
   let availableBalance
   let money
@@ -222,7 +228,7 @@ function callObj(operationObj, countCheck, money, availableBalance, countDestiny
       three: {string:`Cuenta bancaria de origen:`.padEnd(66, '.') + `${countCheck.countBank}`,action:true},
       four: {string:`saldo en su cuenta:`.padEnd(70, '.') + `$${availableBalance}`.padStart(10, '.'),action:true},
       five: {string:`saldo a retirar de su cuenta:`.padEnd(70, '.') + `$${money}`.padStart(10, '.'),action:true},
-      six: {string:`saldo disponible en su cuenta:`.padEnd(70, '.') + `$${countCheck.countBalance}`.padStart(10, '.'),action:true},
+      six: {string:`saldo disponible en su cuenta:`.padEnd(70, '.') + `$${countCheck.countBalance - money}`.padStart(10, '.'),action:true},
       seven: {string:`Eso es todo gracias por su preferencia Sr(a).${arrayCount.countUser}`,action:true},
       }
     case 'transfer':
@@ -244,7 +250,7 @@ function callObj(operationObj, countCheck, money, availableBalance, countDestiny
         three: {string:`Cuenta bancaria del destino del deposito:`.padEnd(66, '.') + `${countCheck.countBank}`,action:true},
         four: {string:`saldo anterior en su cuenta:`.padEnd(70, '.') + `$${availableBalance}`.padStart(10, '.'),action:true},
         five: {string:`saldo a depositar:`.padEnd(70, '.') + `$${money}`.padStart(10, '.'),action:true},
-        six: {string:`saldo actual en su cuenta:`.padEnd(70, '.') + `$${countCheck.countBalance}`.padStart(10, '.'),action:true},
+        six: {string:`saldo actual en su cuenta:`.padEnd(70, '.') + `$${countCheck.countBalance - money}`.padStart(10, '.'),action:true},
         seven: {string:`Eso es todo gracias Sr(a).${arrayCount.countUser}`,action:true},
       }
     case 'transactions':
