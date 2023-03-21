@@ -51,11 +51,6 @@ for(let i = 0; i < localStorage.length; i++){
 balance('.name-count', arrayCount.countUser)
 
 function changePage(page){
-  document.querySelector(`.${page}-number-count__one`).innerText = arrayCount.count01.countBank
-  if(arrayCount.count02){
-    document.querySelector(`.${page}-number-count__two`).innerText = arrayCount.count02.countBank
-  }
-
   if(page == 'rechange' || page == 'pay'|| page == 'other' || page == 'question'){
     document.querySelector('.name-page-undefined').innerText = page
     let error = document.querySelector('.undefined-content')
@@ -63,6 +58,11 @@ function changePage(page){
     setTimeout(()=>error.style.display = "none", 2000)
     return
   }
+  document.querySelector(`.${page}-number-count__one`).innerText = arrayCount.count01.countBank
+  if(arrayCount.count02){
+    document.querySelector(`.${page}-number-count__two`).innerText = arrayCount.count02.countBank
+  }
+
   document.querySelector('.principal').style.display = "none"
   document.querySelector(`.${page}-container`).style.display = "block"
   operation(page)
