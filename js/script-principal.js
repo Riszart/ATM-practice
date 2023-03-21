@@ -158,7 +158,7 @@ function processWrite(stringLoad, lockedPoint, page){
         pLoad.innerText = pLoad.innerText + iterationArray.next().value
         if(pLoad.innerText === stringLoad)locked = true
       }else {
-        if(completeLoad == 20 || lockedPoint == true){
+        if(completeLoad == 50 || lockedPoint == true){
           pLoad.innerText = stringLoad
           clearInterval(proces)
           resolve()
@@ -172,7 +172,7 @@ function processWrite(stringLoad, lockedPoint, page){
           }
         }
       }
-    },1)
+    },10)
   })
 }
 async function finishOperation(obj, page){
@@ -299,5 +299,3 @@ function seachCount(numberCount, money){
     eight: {string:`porfavor ingrese un numero de cuenta existente (13 digitos).`,action:true},
   }, "transfer")
 }
-
-241730

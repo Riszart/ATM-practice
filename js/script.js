@@ -26,12 +26,16 @@ function createElemntsLocal(){
       }
       else{
         if(typeof passwordNumber === 'number'){
-          localStorage.setItem('user03', JSON.stringify({
+          localStorage.setItem('789456', JSON.stringify({
             countUser: name,
             id: 789456,
             password: passwordNumber,
             count01:{
               countBank: '987-6543210987',
+              countBalance: random(),
+            },
+            count02:{
+              countBank: '654-1233210987',
               countBalance: random(),
             }
           }))
