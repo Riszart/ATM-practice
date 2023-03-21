@@ -1,6 +1,6 @@
 div.transactions-container
   div.transactions-content
-    h2 transacciones 
+    h2 transacciones interbancaria
     div.transactions-content__data
       p nombre del propietario:
         span.name-ower.name-count
@@ -10,15 +10,19 @@ div.transactions-container
         span.money-count 
     div.transactions-count 
       div.transactions-count__one
-        label(for="") cuenta: 123 4567890123
+        label(for="") cuenta: 
+          span.transactions-number-count__one
         input.transactions-count__one-input(type="checkbox" name="count")
       div.transactions-count__two
-        label(for="") cuenta: 987 6543210987
+        label(for="") cuenta:
+          span.transactions-number-count__two
         input.transactions-count__two-input(type="checkbox" name="count")
     div.transactions__detail
     div.transactions-input-send
       div 
-        label(for="input-transactions") monto de la transacción:
+        label(for="input-transactions-count") introduce CCI del destinatario (15 digitos):
+        input.input__transactions-count(type="number" name="input-transactions" maxlength="15")
+        label(for="input-transactions") introduce el monto que deseas tranferir:
         input.input__transactions(type="number" name="input-transactions")
       div.botton-content__transactions 
         div.botton-cancel__transactions

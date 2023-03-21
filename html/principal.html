@@ -66,11 +66,11 @@
         </div>
         <div class="withdraw-count"> 
           <div class="withdraw-count__one">
-            <label for="">cuenta: 123 4567890123</label>
+            <label for="">cuenta:<span class="withdraw-number-count__one"></span></label>
             <input class="withdraw-count__one-input" type="checkbox" name="count">
           </div>
           <div class="withdraw-count__two">
-            <label for="">cuenta: 987 6543210987</label>
+            <label for="">cuenta:<span class="withdraw-number-count__two"></span></label>
             <input class="withdraw-count__two-input" type="checkbox" name="count">
           </div>
         </div>
@@ -105,11 +105,11 @@
         </div>
         <div class="deposit-count"> 
           <div class="deposit-count__one">
-            <label for="">cuenta: 123 4567890123</label>
+            <label for="">cuenta:<span class="deposit-number-count__one"></span></label>
             <input class="deposit-count__one-input" type="checkbox" name="count">
           </div>
           <div class="deposit-count__two">
-            <label for="">cuenta: 987 6543210987</label>
+            <label for="">cuenta:<span class="deposit-number-count__two"></span></label>
             <input class="deposit-count__two-input" type="checkbox" name="count">
           </div>
         </div>
@@ -132,7 +132,7 @@
     </div>
     <div class="transfer-container">
       <div class="transfer-content">
-        <h2>tranferencia interbancaria</h2>
+        <h2>tranferencia</h2>
         <div class="transfer-content__data">
           <p>propietario de la cuenta de origen:<span class="name-ower name-count"></span></p>
         </div>
@@ -142,19 +142,19 @@
         </div>
         <div class="transfer-count"> 
           <div class="transfer-count__one">
-            <label for="">cuenta: 123 4567890123</label>
+            <label for="">cuenta:<span class="transfer-number-count__one"></span></label>
             <input class="transfer-count__one-input" type="checkbox" name="count">
           </div>
           <div class="transfer-count__two">
-            <label for="">cuenta: 987 6543210987</label>
+            <label for="">cuenta:<span class="transfer-number-count__two"></span></label>
             <input class="transfer-count__two-input" type="checkbox" name="count">
           </div>
         </div>
         <div class="transfer__detail"></div>
         <div class="transfer-input-send">
           <div> 
-            <label for="input-transfer-count">introduce CCI de la cuenta del destino:</label>
-            <input class="input__transfer-count" type="number" name="input-transfer">
+            <label for="input-transfer-count">Numero de cuenta del destinatario:</label>
+            <input class="input__transfer-count" type="number" name="input-transfer" maxlength="13">
             <label for="input-transfer">introduce el monto que deseas tranferir:</label>
             <input class="input__transfer" type="number" name="input-transfer">
           </div>
@@ -171,7 +171,7 @@
     </div>
     <div class="transactions-container">
       <div class="transactions-content">
-        <h2>transacciones </h2>
+        <h2>transacciones interbancaria</h2>
         <div class="transactions-content__data">
           <p>nombre del propietario:<span class="name-ower name-count"></span></p>
         </div>
@@ -181,18 +181,20 @@
         </div>
         <div class="transactions-count"> 
           <div class="transactions-count__one">
-            <label for="">cuenta: 123 4567890123</label>
+            <label for="">cuenta: <span class="transactions-number-count__one"></span></label>
             <input class="transactions-count__one-input" type="checkbox" name="count">
           </div>
           <div class="transactions-count__two">
-            <label for="">cuenta: 987 6543210987</label>
+            <label for="">cuenta:<span class="transactions-number-count__two"></span></label>
             <input class="transactions-count__two-input" type="checkbox" name="count">
           </div>
         </div>
         <div class="transactions__detail"></div>
         <div class="transactions-input-send">
           <div> 
-            <label for="input-transactions">monto de la transacción:</label>
+            <label for="input-transactions-count">introduce CCI del destinatario (15 digitos):</label>
+            <input class="input__transactions-count" type="number" name="input-transactions" maxlength="15">
+            <label for="input-transactions">introduce el monto que deseas tranferir:</label>
             <input class="input__transactions" type="number" name="input-transactions">
           </div>
           <div class="botton-content__transactions"> 

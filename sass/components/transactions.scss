@@ -2,7 +2,7 @@
   @include class-container;
   .transactions-content {
     h2{
-      width: 315px;
+      width: 665px;
     }
     @include class-content;
     .transactions-content__data {
@@ -15,13 +15,15 @@
       @include style-counts;
     }
     .transactions__detail{
-      height: 450px;
+      height: 380px;
       @include class__detail;
     }
     .transactions-input-send {
       @include class-input-send;
     }
     .botton-content__transactions {
+      align-self: flex-end;
+      margin-bottom: 15px;
       @include boton-content__class;
     }
     .botton-send__transactions {

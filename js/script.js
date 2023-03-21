@@ -42,8 +42,8 @@ function createElemntsLocal(){
       }
     }
   }
-  localStorage.setItem('user01', JSON.stringify({
-    countUser: 'Kim Jisoo',
+  localStorage.setItem('456123', JSON.stringify({
+    countUser: 'kim jisoo',
     id: 456123,
     password: 123456,
     count01:{
@@ -55,8 +55,8 @@ function createElemntsLocal(){
       countBalance: random(),
     }
   }))
-  localStorage.setItem('user02', JSON.stringify({
-    countUser: 'Park Rose',
+  localStorage.setItem('789123', JSON.stringify({
+    countUser: 'park rose',
     id: 789123,
     password: 654321,
     count01:{
@@ -70,33 +70,47 @@ verifyAccount()
 function verifyAccount(){
   const arrayCount = []
   for(let i = 0; i < localStorage.length; i++){
+    if(typeof JSON.parse(localStorage.getItem(localStorage.key(i))) == 'object'){
     arrayCount.push(JSON.parse(localStorage.getItem(localStorage.key(i))))
+    }
   }
-  console.log(arrayCount)
   inputName.addEventListener('keypress', (event)=>{
     if((inputName.value + event.key).length <= 20){
       document.querySelector('.name-letter').innerText = inputName.value + event.key
     }
   })
   document.querySelector('.botton').addEventListener('click', ()=>{
-    if(inputPassword.value == 1234 && inputName.value.length >=5 ){
-      if(!localStorage["user"])create(inputName)
-      if(document.querySelector(".name-ower-cart").value === localStorage["user"]){
-        inputName.value = ""
-        if(window.location.pathname == '/index.html'){
-          setTimeout(()=>{window.open(`/html/principal.html`, "_self")}, 1000)
-        }else {
-          setTimeout(()=>{window.open(`${window.location.pathname}/html/principal.html`, "_self")}, 1000)
-        } 
+    let selectUser = selectCount(inputName.value, inputPassword.value, arrayCount)
+    if(selectUser[0]){
+      localStorage.setItem('login', selectUser[1])
+      if(window.location.pathname == '/index.html'){
+        setTimeout(()=>{window.open(`/html/principal.html`, "_self")}, 1000)
       }
-    }
-    else {
+      else{
+        setTimeout(()=>{window.open(`${window.location.pathname}/html/principal.html`, "_self")}, 1000)
+      }
+    }else{
       inputPassword.style.border = 'solid 2px red'
       inputName.style.border = 'solid 2px red'
+      return 
     }
+
   })
 }
-
+function selectCount(name, password, options){
+  console.log(options)
+  for(let i of options){
+    if(i.countUser === name){
+      if(i.password == password){
+        return [true, i.id]
+      }
+      else{
+        return false
+      }
+    }
+  }
+  return false
+}
 function random(){
   let a = Math.random()*1000000
   return Math.floor(a)
